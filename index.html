@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>2D MINECRAFT MOBILE</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="fabric.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<body class="body_background">
+
+	<center>
+
+	<h2 class="btn-primary">2D MINECRAFT MOBILE</h2>
+
+	<div class="btn-danger" id="head_info">
+		<h3>Current Width  = <span id="width">30</span></h3>
+		<h3>Current Height  = <span id="height">30</span></h3>
+    </div>
+    
+    <canvas id="myCanvas" width="1000" height="600">
+	</canvas>
+	
+	<span id="main" style="margin-left: 400px;">
+		<div style="margin-top: 10px; margin-bottom: 10px;">
+			<label>Choose Block :</label>
+			<select name="Blocks" id="blocks" onchange="get_value()">
+				<optgroup label="Blocks">
+					<option value="Dirt">Dirt</option>
+					<option value="Light Green Grass">Light Green Grass</option>
+					<option value="Dark Green Grass">Dark Green Grass</option>
+					<option value="Tree Log">Tree Log</option>
+					<option value="Wall">Wall</option>
+					<option value="Yellow Wall">Yellow Wall</option>
+					<option value="Netherrack">Netherrack</option>
+					<option value="Wool">Wool</option>
+					<option value="Glowstone">Glowstone</option>
+				</optgroup>
+			</select>
+
+			<button onclick="add_block()" class="btn btn-danger">OK</button>
+		</div>
+	
+     <div>  
+	   <button style="margin-left: 35px;" class="btn btn-warning" onclick="increase()"><span class="glyphicon glyphicon-plus"></span></button>
+	   <button style="margin-left: 20px;" class="btn btn-warning" onclick="decrease()"><span class="glyphicon glyphicon-minus"></span></button>
+	 </div>
+
+	 <div>
+		 <button style="margin-left: 35px;" class="btn btn-info" onclick="up()"><span class="glyphicon glyphicon-arrow-up"></span></button>
+		 <button style="margin-left: 20px;" class="btn btn-info" onclick="down()"><span class="glyphicon glyphicon-arrow-down"></span></button>
+		 <button style="margin-left: 20px;" class="btn btn-info" onclick="right()"><span class="glyphicon glyphicon-arrow-right"></span></button>
+		 <button style="margin-left: 20px;" class="btn btn-info" onclick="left()"><span class="glyphicon glyphicon-arrow-left"></span></button>
+	 </div>
+    </span>
+
+	</center>
+	<script src="main.js"></script>
+</body>
+</html>
