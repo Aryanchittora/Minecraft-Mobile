@@ -8,6 +8,17 @@ block_height = 30;
 
 player_object = "";
 
+var width = screen.width;
+var new_width = screen.width - 70;
+
+var new_height = screen.height - 300;
+
+if (width<992) {
+    document.getElementById("myCanvas").width=new_width;
+    document.getElementById("myCanvas").height=new_height;
+    document.body.style.overflow="hidden";
+}
+
 function Player_update() {
     fabric.Image.fromURL("player.png", function(Img){
         player_object = Img;
